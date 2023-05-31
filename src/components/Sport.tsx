@@ -10,7 +10,7 @@ import stronglift from "../assets/sport/stronglift.jpg";
 import ImageCard from "./ImageCard";
 import { Link } from "react-router-dom";
 
-import { FaArrowCircleLeft, FaArrowLeft } from "react-icons/fa";
+import { FaArrowLeft } from "react-icons/fa";
 
 interface Sport {
   id: number;
