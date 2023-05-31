@@ -29,20 +29,20 @@ function HowItWorks() {
   ];
 
   return (
-    <div className="flex flex-col justify-evenly p-10 md:h-screen mx-auto w-[90%] max-w-[1250px]">
+    <div className="mx-auto flex w-[90%] max-w-[1250px] flex-col justify-evenly p-10 md:h-screen">
       <SectionTitle title="How does RGMN work?" />
-      <div className="flex flex-col space-y-5 md:flex-row md:space-y-0">
+      <div className="mt-16 flex  flex-col space-y-5 md:flex-row md:space-y-0 lg:mt-0">
         {steps.map((step) => (
-          <div key={step.id} className="flex flex-col space-y-2 items-start text-start">
-            <div className="bg-[#333] p-5 rounded text-2xl mb-5">{step.icon}</div>
-            <div className="font-extrabold text-xl">{step.title}</div>
-            <div className="text-gray-400 font-light w-[90%]">{step.description}</div>
+          <div key={step.id} className="flex flex-col items-start space-y-2 text-start">
+            <div className="mb-5 rounded bg-[#333] p-5 text-2xl">{step.icon}</div>
+            <div className="text-xl font-extrabold">{step.title}</div>
+            <div className="w-[90%] font-light text-gray-400">{step.description}</div>
           </div>
         ))}
       </div>
 
       <button
-        className="cta-btn bg-white text-black w-[200px] self-center my-10 lg:mx-0"
+        className="cta-btn my-10 w-[200px] self-center bg-white text-black lg:mx-0"
         onClick={() => navigate("/create")}
         style={{
           backgroundColor: "#b8c6db",

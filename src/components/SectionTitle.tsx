@@ -1,6 +1,6 @@
 function SectionTitle({ title }: { title: string }) {
   return (
-    <h2 className="text-xl md:text-2xl relative w-fit font-bold md:mb-10 lg:self-start">
+    <h2 className="text-xl md:text-2xl relative w-fit font-bold  lg:self-start">
       {title}
       <span
         className="absolute -bottom-2 lg:-bottom-4 bg-white left-[15%] lg:left-0 right-[15%] h-[3px]"
