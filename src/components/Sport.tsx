@@ -12,13 +12,17 @@ import { Link } from "react-router-dom";
 
 import { FaArrowLeft } from "react-icons/fa";
 
+interface SportProps {
+  setSport: React.Dispatch<React.SetStateAction<string>>;
+}
+
 interface Sport {
   id: number;
   name: string;
   image: string;
 }
 
-function Sport() {
+function Sport({ setSport }: SportProps) {
   const sports: Sport[] = [
     {
       id: 1,
@@ -51,13 +55,20 @@ function Sport() {
       image: bodybuilding,
     },
   ];
+
+  const handleClick = (name: string) => {
+    setSport(name);
+  };
+
   return (
     <div className="mx-auto flex min-w-[350px] max-w-[90%] flex-col items-center justify-center p-10 lg:h-screen">
       <SectionTitle title="Choose sport focus" />
 
       <div className="mt-24 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         {sports.map((sport) => (
-          <ImageCard image={sport.image} name={sport.name} key={sport.id} />
+          <div key={sport.id} onClick={() => handleClick(sport.name)}>
+            <ImageCard image={sport.image} name={sport.name} sport />
+          </div>
         ))}
       </div>
 
