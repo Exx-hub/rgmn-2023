@@ -1,14 +1,26 @@
 import { useEffect, useState } from "react";
-import { exerciseSets } from "../data/data";
+import { allExerciseList, exerciseSets } from "../data/data";
+import { Workout } from "../pages/Workout";
 
 type Level = "beginner" | "competitive" | "pro";
 type Sport = "boxing";
 
 const useGetWorkouts = (sport: Sport, level: Level) => {
-  const [workouts, setWorkouts] = useState<(string | number)[][]>([]);
+  const [workouts, setWorkouts] = useState<Workout[]>([]);
 
   useEffect(() => {
-    setWorkouts(exerciseSets[sport][level]);
+    const exerciseSet = exerciseSets[sport][level];
+
+    const workoutList = exerciseSet.map((item) => {
+      const [exerciseName, duration] = item as [string, number];
+
+      const exercise = allExerciseList.find((e) => e.image.includes(exerciseName));
+
+      const imageUrl = `https://res.cloudinary.com/dmcl7ol1o/image/upload/${exercise?.image}`;
+
+      return { id: exercise?.id, title: exercise?.title, imageUrl, duration };
+    });
+    setWorkouts(workoutList);
   }, [level, sport]);
 
   return { workouts };

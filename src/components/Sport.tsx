@@ -31,28 +31,30 @@ function Sport({ setSport }: SportProps) {
     },
     {
       id: 2,
-      name: "crossfit",
-      image: crossfit,
-    },
-    {
-      id: 3,
-      name: "mma",
-      image: mma,
-    },
-    {
-      id: 4,
       name: "powerlifting",
       image: stronglift,
     },
     {
+      id: 3,
+      name: "bodybuilding",
+      image: bodybuilding,
+    },
+
+    {
+      id: 4,
+      name: "mma",
+      image: mma,
+    },
+
+    {
       id: 5,
-      name: "fitness",
-      image: fitness,
+      name: "crossfit",
+      image: crossfit,
     },
     {
       id: 6,
-      name: "bodybuilding",
-      image: bodybuilding,
+      name: "fitness",
+      image: fitness,
     },
   ];
 

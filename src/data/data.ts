@@ -2,142 +2,142 @@ export const allExerciseList = [
   {
     id: 1,
     title: "Run Jab Jab",
-    image: "run-jab-jab",
+    image: "run-jab-jab_lcydzs.gif",
   },
   {
     id: 2,
     title: "Jab Cross Knee",
-    image: "jab-cross-knee",
+    image: "jab-cross-knee_n59aiq.gif",
   },
   {
     id: 3,
     title: "Jump Squat Run",
-    image: "jump-squat-run",
+    image: "jump-squat-run_h6oqvv.gif",
   },
   {
     id: 4,
     title: "Hip Flexor Stretch",
-    image: "hip-flexor-stretch",
+    image: "hip-flexor-stretch_lsm3wq.gif",
   },
   {
     id: 5,
     title: "Twisting Knee Plank",
-    image: "twisting-knee-plank",
+    image: "twisting-knee-plank_joi7f9.gif",
   },
   {
     id: 6,
     title: "Back Balances",
-    image: "back-balances",
+    image: "back-balances_c8hxyi.gif",
   },
   {
     id: 7,
     title: "Crunch Diagonals",
-    image: "crunch-diagonals",
+    image: "crunch-diagonals_cjv5fw.gif",
   },
   {
     id: 8,
     title: "One-on-One Crunches",
-    image: "one-on-one-crunches",
+    image: "one-on-one-crunches_hveybh.gif",
   },
   {
     id: 9,
     title: "Reachouts",
-    image: "reachouts",
+    image: "reachouts_hw4qqm.gif",
   },
   {
     id: 10,
     title: "Twist Candle Crunches",
-    image: "twist-candle-crunches",
+    image: "twist-candle-crunches_tqnd6f.gif",
   },
   {
     id: 11,
     title: "Shoulder Press",
-    image: "shoulder-press",
+    image: "shoulder-press_vr0j8a.gif",
   },
   {
     id: 12,
     title: "Kettlebell Presses",
-    image: "kettlebell-presses",
+    image: "kettlebell-presses_dvi6sj.gif",
   },
   {
     id: 13,
     title: "Kettlebell Squat Press",
-    image: "kettlebell-squat-press",
+    image: "kettlebell-squat-press_dwkfyy.gif",
   },
   {
     id: 14,
     title: "Medball Chest Press",
-    image: "medball-chest-press",
+    image: "medball-chest-press_vvb0tv.gif",
   },
   {
     id: 15,
     title: "Tricep Extensions",
-    image: "tricep-extensions",
+    image: "tricep-extensions_njpj8q.gif",
   },
   {
     id: 16,
     title: "Clean and Press",
-    image: "barbel-clean-and-press",
+    image: "clean-and-press_tr9r1k.gif",
   },
   {
     id: 17,
     title: "Dumbbell Cleans",
-    image: "db-cleans",
+    image: "db-cleans_phtm8v.gif",
   },
   {
     id: 18,
     title: "Hinge Hammer Curls",
-    image: "hinge-hammer-curls",
+    image: "hinge-hammer-curls_luoobg.gif",
   },
   {
     id: 19,
     title: "Air Squats",
-    image: "air-squats",
+    image: "air-squats_wmfktd.gif",
   },
   {
     id: 20,
     title: "Burpee Pushup",
-    image: "burpee-pushup",
+    image: "burpee-pushup_mlay7v.gif",
   },
   {
     id: 21,
     title: "High Jumps",
-    image: "high-jump",
+    image: "high-jumps_ag8rky.gif",
   },
   {
     id: 22,
     title: "Squat Jumps",
-    image: "squat-jumps",
+    image: "squat-jumps_bt8di9.gif",
   },
   {
     id: 23,
     title: "Oblique Twists",
-    image: "oblique-twists",
+    image: "oblique-twists_kttzkd.gif",
   },
   {
     id: 24,
     title: "Jump Rope",
-    image: "jump-rope",
+    image: "jump-rope_ffswyu.gif",
   },
   {
     id: 25,
     title: "Pushups",
-    image: "pushups",
+    image: "pushups_qty481.gif",
   },
   {
     id: 26,
     title: "Knee Elbow Situps",
-    image: "knee-elbow-situps",
+    image: "knee-elbow-situps_pkhdi3.gif",
   },
   {
     id: 27,
     title: "Bicycle Kicks",
-    image: "bicycle-kicks",
+    image: "bicycle-kicks_ralnn5.gif",
   },
   {
     id: 28,
     title: "Mountain Climbers",
-    image: "mountain-climbers",
+    image: "mountain-climbers_cz2inm.gif",
   },
 ];
 
@@ -213,7 +213,7 @@ export const exerciseSets = {
   },
   powerlifting: {
     beginner: [
-      ["barbel-clean-and-press", 20],
+      ["clean-and-press", 20],
       ["db-cleans", 20],
       ["kettlebell-squat-press", 20],
       ["hinge-hammer-curls", 20],
@@ -221,14 +221,14 @@ export const exerciseSets = {
     ],
     competitive: [
       ["kettlebell-squat-press", 30],
-      ["barbel-clean-and-press", 30],
+      ["clean-and-press", 30],
       ["hinge-hammer-curls", 30],
       ["db-cleans", 30],
       ["kettlebell-presses", 30],
     ],
     pro: [
       ["hinge-hammer-curls", 40],
-      ["barbel-clean-and-press", 40],
+      ["clean-and-press", 40],
       ["kettlebell-squat-press", 40],
       ["db-cleans", 40],
       ["kettlebell-presses", 40],
@@ -238,12 +238,12 @@ export const exerciseSets = {
     beginner: [
       ["air-squats", 20],
       ["burpee-pushup", 20],
-      ["high-jump", 20],
+      ["high-jumps", 20],
       ["squat-jumps", 20],
       ["oblique-twists", 20],
     ],
     competitive: [
-      ["high-jump", 30],
+      ["high-jumps", 30],
       ["air-squats", 30],
       ["squat-jumps", 30],
       ["burpee-pushup", 30],
@@ -252,7 +252,7 @@ export const exerciseSets = {
     pro: [
       ["squat-jumps", 40],
       ["air-squats", 40],
-      ["high-jump", 40],
+      ["high-jumps", 40],
       ["burpee-pushup", 40],
       ["oblique-twists", 40],
     ],
@@ -299,3 +299,5 @@ export const exerciseSets = {
 //   })
 //   return mapped
 // }
+
+// https://res.cloudinary.com/dmcl7ol1o/image/upload
