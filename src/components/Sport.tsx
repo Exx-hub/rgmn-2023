@@ -26,30 +26,28 @@ function Sport({ setSport }: SportProps) {
   const sports: Sport[] = [
     {
       id: 1,
+      name: "bodybuilding",
+      image: bodybuilding,
+    },
+    {
+      id: 2,
       name: "boxing",
       image: boxer,
     },
     {
-      id: 2,
-      name: "powerlifting",
-      image: stronglift,
-    },
-    {
       id: 3,
-      name: "bodybuilding",
-      image: bodybuilding,
-    },
-
-    {
-      id: 4,
       name: "mma",
       image: mma,
     },
-
     {
-      id: 5,
+      id: 4,
       name: "crossfit",
       image: crossfit,
+    },
+    {
+      id: 5,
+      name: "powerlifting",
+      image: stronglift,
     },
     {
       id: 6,

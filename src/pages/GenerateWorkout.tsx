@@ -16,8 +16,10 @@ function GenerateWorkout() {
 
   useEffect(() => {
     if (sport && level) {
+      localStorage.setItem("rgmn", JSON.stringify({ sport, level }));
+
       // if sport and level selected, route to workout and pass sport and level as state
-      navigate("/workout", { state: { sport, level } });
+      navigate("/workouts", { state: { sport, level } });
     }
   }, [sport, level, navigate]);
 

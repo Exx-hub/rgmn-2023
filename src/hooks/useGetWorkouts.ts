@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { allExerciseList, exerciseSets } from "../data/data";
-import { Workout } from "../pages/Workout";
+import { Workout } from "../types/types";
 
 type Level = "beginner" | "competitive" | "pro";
 type Sport = "boxing";

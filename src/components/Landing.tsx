@@ -3,33 +3,55 @@ import whiteLogo from "../assets/whiteLogo.svg";
 import ImageOverlap from "./ImageOverlap";
 
 import { FaDumbbell, FaArrowRight } from "react-icons/fa";
+import { useEffect, useState } from "react";
+
+interface SavedWorkout {
+  sport: string;
+  level: string;
+}
 
 function Landing() {
+  const [savedWorkout, setSavedWorkout] = useState<SavedWorkout | null>(null);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    setSavedWorkout(JSON.parse(localStorage.getItem("rgmn") as string));
+  }, []);
+
+  const handleContinue = () => {
+    if (savedWorkout) {
+      navigate("/workouts", {
+        state: { sport: savedWorkout?.sport, level: savedWorkout?.level },
+      });
+    } else {
+      navigate("/create");
+    }
+  };
+
   return (
-    <div className="w-full max-w-[1250px] mx-auto px-6 lg:px-0 relative h-screen flex flex-col overflow-hidden bg-mobile bg-cover bg-center bg-no-repeat lg:bg-none -z-20">
-      <div className="w-[115px] mt-3 md:mt-6 md:ml-10 animate__animated animate__bounce animate__delay-1s animate__repeat-2">
+    <div className="relative -z-20 mx-auto flex h-screen w-full max-w-[1250px] flex-col overflow-hidden bg-mobile bg-cover bg-center bg-no-repeat px-6 lg:bg-none lg:px-0">
+      <div className="animate__animated animate__bounce animate__delay-1s animate__repeat-2 mt-3 w-[115px] md:ml-10 md:mt-6">
         <img src={whiteLogo} alt="" />
       </div>
 
-      <div className="my-auto relative md:pl-10 -translate-y-12">
-        <div className="max-w-[600px] animate__animated animate__fadeInUp animate__delay-1s">
-          <h2 className="text-3xl lg:text-4xl font-bold leading-tight">
+      <div className="relative my-auto -translate-y-12 md:pl-10">
+        <div className="animate__animated animate__fadeInUp animate__delay-1s max-w-[600px]">
+          <h2 className="text-3xl font-bold leading-tight lg:text-4xl">
             Unlock your hidden strengths and reach your full potential with{" "}
             <span
-              className="bg-white text-black rounded-sm"
+              className="rounded-sm bg-white text-black"
               style={{
                 backgroundColor: "#b8c6db",
                 backgroundImage: "linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%)",
               }}
             >
               RGMN
-            </span>{" "}
+            </span>
             /&apos;re.gi.men/.
           </h2>
         </div>
 
-        <div className="text-gray-400 max-w-[500px] mt-3 animate__animated animate__fadeInUp animate__delay-1s">
+        <div className="animate__animated animate__fadeInUp animate__delay-1s mt-3 max-w-[500px] text-gray-400">
           <p>
             Improve overall fitness, develop a well-rounded skill set, prevent injuries and greatly
             enhance performance in primary sport.
@@ -37,7 +59,7 @@ function Landing() {
           <p>Start your RGMN today!</p>
         </div>
 
-        <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-3 mt-5">
+        <div className="mt-5 flex flex-col space-y-2 md:flex-row md:space-x-3 md:space-y-0">
           <button
             className="cta-btn bg-white text-black"
             onClick={() => navigate("/create")}
@@ -48,16 +70,15 @@ function Landing() {
           >
             <FaDumbbell /> <span>Get Started</span>
           </button>
-          <button className="cta-btn">
+          <button className="cta-btn" onClick={handleContinue}>
             <span>Continue Workout</span> <FaArrowRight />
-            {/* create workout if localstorage has no workout data  */}
           </button>
         </div>
       </div>
 
-      <div className="absolute inset-0 bg-[#101010] opacity-60 xl:opacity-0 -z-20"></div>
+      <div className="absolute inset-0 -z-20 bg-[#101010] opacity-60 xl:opacity-0"></div>
 
-      <div className="absolute hidden lg:block top-40 xl:top-52 2xl:top-64 right-20 -z-30 animate__animated animate__fadeInRight animate__delay-1s">
+      <div className="animate__animated animate__fadeInRight animate__delay-1s absolute right-20 top-40 -z-30 hidden lg:block xl:top-52 2xl:top-64">
         <ImageOverlap />
       </div>
     </div>

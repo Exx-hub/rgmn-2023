@@ -33,13 +33,17 @@ body {
 }
 
 .cta-btn {
-  @apply flex items-center justify-center space-x-2 border border-white px-6 py-3 rounded-md hover:scale-105 transition-transform;
+  @apply flex items-center justify-center space-x-2 rounded-md border border-white px-6 py-3 transition-transform hover:scale-105;
 }
 
 .overlap-image {
-  @apply w-60 absolute;
+  @apply absolute w-60;
 }
 
 .bg-gradient {
-  @apply selection:bg-gradient-to-b from-transparent via-gray-600 to-black;
+  @apply from-transparent via-gray-600 to-black selection:bg-gradient-to-b;
+}
+
+.timer-controls {
+  @apply transition-transform hover:scale-110 hover:text-[silver];
 }

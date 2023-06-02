@@ -6,7 +6,9 @@ import ErrorPage from "./pages/ErrorPage";
 import HomePage from "./pages/HomePage";
 
 import GenerateWorkout from "./pages/GenerateWorkout";
-import Workout from "./pages/Workout";
+import Workout from "./pages/Workouts";
+import Start from "./pages/Start";
+import Complete from "./pages/Complete";
 
 const router = createBrowserRouter([
   {
@@ -17,10 +19,22 @@ const router = createBrowserRouter([
   {
     path: "/create",
     element: <GenerateWorkout />,
+    errorElement: <ErrorPage />,
   },
   {
-    path: "/workout",
+    path: "/workouts",
     element: <Workout />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/start",
+    element: <Start />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/complete",
+    element: <Complete />,
+    errorElement: <ErrorPage />,
   },
 ]);
 

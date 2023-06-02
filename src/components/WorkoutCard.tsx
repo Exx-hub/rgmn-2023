@@ -1,4 +1,4 @@
-import { Workout } from "../pages/Workout";
+import { Workout } from "../types/types";
 
 interface WorkoutCardProps {
   workout: Workout;
